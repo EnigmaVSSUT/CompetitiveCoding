@@ -1,25 +1,19 @@
 #include<iostream>
-#include<algorithm>
 using namespace std;
+#include<algorithm>
+
 int main()
 {
-	long long int t, n, a, b ,k,g, lcm,x,y,q;
+	long int t,n,a,b,k,w,g;
 	cin>>t;
 	while(t--)
 	{
 		cin>>n>>a>>b>>k;
 		g=__gcd(a,b);
-		lcm=(a*b)/g;
-		x= n/a;
-		y=n/b;
-		q=x+y-(2*lcm);
-		
-				if(q>=k)
-		{
-			cout<<"Win\n";
-		}
+		w=n/a+n/b+2*(a*b)/g;
+		if(w>=k)
+			cout<<"Win";
 		else
-			cout<<"Lose\n";
-		
+			cout<<"Lose";
 	}
 }
