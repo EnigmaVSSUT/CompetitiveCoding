@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 #include<algorithm>
+//c++ program
 int main()
 {
     int test;
